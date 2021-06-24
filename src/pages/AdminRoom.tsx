@@ -84,6 +84,7 @@ export function AdminRoom() {
                 author={question.author}
               >
                 <button
+                  className="delete-button"
                   type="button"
                   onClick={() => handleDeleteQuestion(question.id)}
                 >

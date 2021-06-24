@@ -54,11 +54,26 @@
             stroke: #835afd;
           }
         }
+
+        :hover { // Escurece um pouquinho quando passa o cursor
+          filter: brightness(0.7);
+        }
       }
 
-      &:hover {
-        filter: brightness(0.7);
+      &.delete-button {
+        display: flex;
+        align-items: flex-end;
+        
+        :hover { // Deixa a lixeira vermelhinha quando passa o cursor
+          filter: hue-rotate(168deg) saturate(1000%) opacity(95%) contrast(1000%) invert(9%);
+          -webkit-filter: hue-rotate(168deg) saturate(1000%) opacity(95%) contrast(1000%) invert(9%);
+          -moz-filter: hue-rotate(168deg) saturate(1000%) opacity(95%) contrast(1000%) invert(9%);
+        }
       }
+
+//      &:hover {
+//        filter: brightness(0.7);
+//      }
     }
   }
 }
