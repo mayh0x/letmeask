@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 // https://react-hot-toast.com
 
 import logoImg from '../assets/images/logo.svg';
+import noQuestionsImg from '../assets/images/empty-questions.svg';
 
 import { Button } from '../components/Button'
 import { RoomCode } from '../components/RoomCode'
@@ -111,6 +112,15 @@ export function Room() {
         </form>
 
         <div className="question-list">
+          { questions.length === 0 ? (
+            [
+              <img src={noQuestionsImg} alt="" />,
+              <div>
+                <p>Nenhuma pergunta por aqui...</p>
+              </div>,
+              <p>Seja a primeira pessoa a fazer uma pergunta!</p>
+            ]
+          ) : null }
           {questions.map(question => {
             return (
               <Question

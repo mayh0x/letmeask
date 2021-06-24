@@ -18,7 +18,7 @@ export function Question({
 }: QuestionProps) {
   return (
     <div className="question">
-      <p>{content}</p>
+      <em>"{content}"</em>
       <footer>
         <div className="user-info">
           <img src={author.avatar} alt={author.name} />

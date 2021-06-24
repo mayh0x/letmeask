@@ -1,9 +1,11 @@
 import { useHistory, useParams } from 'react-router-dom';
 
 import { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 import logoImg from '../assets/images/logo.svg';
 import deleteImg from '../assets/images/delete.svg';
+import noQuestionsImg from '../assets/images/empty-questions.svg';
 
 import { Button } from '../components/Button'
 import { RoomCode } from '../components/RoomCode'
@@ -32,11 +34,13 @@ export function AdminRoom() {
     })
 
     history.push('/');
+    toast.success('Sala deletada com sucesso!');
   }
 
   async function handleDeleteQuestion(questionId: string) {
     if (window.confirm("Tem certeza que você deseja excluir esta pergunta?")){
       await database.ref(`rooms/${roomId}/questions/${questionId}`).remove();
+      toast.success('Pergunta deletada com sucesso!');
     }
   }
  
@@ -63,6 +67,15 @@ export function AdminRoom() {
         </div>
 
         <div className="question-list">
+        { questions.length === 0 ? (
+            [
+              <img src={noQuestionsImg} alt="" />,
+              <div>
+                <p>Nenhuma pergunta por aqui...</p>
+              </div>,
+              <p>Envie o código desta sala para seus amigos e comece a responder perguntas!</p>
+            ]
+          ) : null }
           {questions.map(question => {
             return (
               <Question

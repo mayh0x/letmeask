@@ -107,6 +107,30 @@
 
     .question-list {
       margin-top: 32px;
+
+      > img {
+        width: 150px;
+        margin: 0 auto;
+        display: flex;
+      }
+
+      div {
+        p {
+          font: 700 20px 'Poppins', sans-serif;
+          margin-top: 24px;
+          flex-direction: center;
+          text-align: center;
+        }
+      }
+
+      > p {
+        font-size: 17px;
+        line-height: 16px;
+        color: #737380;
+        margin-top: 10px;
+        flex-direction: center;
+        text-align: center;
+      }
     }
   }
 }
