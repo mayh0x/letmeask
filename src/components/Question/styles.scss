@@ -8,6 +8,23 @@
     margin-top: 8px;
   }
 
+  &.answered {
+    background: #DBDCDD;
+
+    footer .user-info img {
+      filter: grayscale(1);
+    }
+  }
+
+  &.highlighted {
+    background: #F4F0FF;
+    border: 1px solid #8354FD;
+
+    footer .user-info span {
+      color: #29292E;
+    }
+  }
+
   em {
     color: #29292e;
   }
@@ -33,6 +50,11 @@
         color: #737380;
         font-size: 14px;
       }
+    }
+
+    > div {
+      display: flex;
+      gap: 16px;
     }
 
     button {
@@ -61,13 +83,31 @@
       }
 
       &.delete-button {
-        display: flex;
+        display: center;
         align-items: flex-end;
         
         :hover { // Deixa a lixeira vermelhinha quando passa o cursor
           filter: hue-rotate(168deg) saturate(1000%) opacity(95%) contrast(1000%) invert(9%);
           -webkit-filter: hue-rotate(168deg) saturate(1000%) opacity(95%) contrast(1000%) invert(9%);
           -moz-filter: hue-rotate(168deg) saturate(1000%) opacity(95%) contrast(1000%) invert(9%);
+        }
+      }
+
+      &.check-button {
+        display: center;
+        align-items: flex-end;
+
+        :hover { // Escurece um pouquinho quando passa o cursor
+          filter: brightness(0.7);
+        }
+      }
+
+      &.answer-button {
+        display: center;
+        align-items: flex-end;
+
+        :hover { // Escurece um pouquinho quando passa o cursor
+          filter: brightness(0.7);
         }
       }
 
