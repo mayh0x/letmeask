@@ -34,7 +34,7 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 
 - Como foi um projeto construído com base na autenticação e no banco de dados do [Google Firebase](https://firebase.google.com/?hl=pt), é preciso entender um pouco do funcionamento do Firebase para conseguir executar certas funcionalidades do app.
 - Foram instaladas também algumas dependências com `yarn`
-- O servidor pode ser iniciado com `yarn start`, onde se tem acesso pelo `localhost:3000` no navegador e, além disso, o app pode ser hospedado pelo próprio Firebase.
+- O servidor pode ser iniciado com `yarn start`, onde se tem acesso pelo [`localhost:3000`](http://localhost:3000) no navegador e, além disso, o app pode ser hospedado pelo próprio Firebase.
 
 ---
 
